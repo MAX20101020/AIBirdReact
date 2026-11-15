@@ -1,0 +1,127 @@
+.subs-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.subs-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.subs-subtitle {
+  color: #94a3b8;
+  margin-bottom: 40px;
+}
+
+.subs-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.sub-card {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.sub-card:hover {
+  transform: translateY(-5px);
+}
+
+.sub-card.popular {
+  border-color: #7dd3fc;
+  box-shadow: 0 0 20px rgba(125, 211, 252, 0.2);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #7dd3fc;
+  color: #0f172a;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.sub-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #f8fafc;
+}
+
+.sub-price {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.sub-price span {
+  font-size: 16px;
+  font-weight: normal;
+  color: #94a3b8;
+}
+
+.sub-attempts {
+  color: #cbd5e1;
+  font-size: 16px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #334155;
+}
+
+.sub-btn {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #334155;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sub-btn:hover:not(:disabled) {
+  background: #475569;
+}
+
+.sub-btn.primary {
+  background: #7dd3fc;
+  color: #0f172a;
+}
+
+.sub-btn.primary:hover:not(:disabled) {
+  background: #bae6fd;
+}
+
+.sub-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sub-error {
+  background: #7f1d1d;
+  color: #fca5a5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
