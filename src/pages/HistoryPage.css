@@ -179,3 +179,24 @@
     #0f172a 20px
   );
 }
+
+@media (max-width: 850px) {
+  .search-form {
+    flex-direction: column; 
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+    padding: 0;
+  }
+
+  .search-form input {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .search-btn, 
+  .clear-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}

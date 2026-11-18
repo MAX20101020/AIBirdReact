@@ -21,16 +21,22 @@ export function Header() {
           {user && (
             <>  
               <div 
-              onClick={() => navigate('/subscription')}
-              className="btn-ghost"
-              style={{ cursor: 'pointer' }}
-              title="Купити спроби"
-            >
-              <span>Спроби:</span>
-              <strong style={{ color: '#7dd3fc' }}>{user.attempts_left}</strong>
-            </div>
-            <Link to="/statistics" className="nav-link">Статистика</Link>
-            <Link to="/history" className="nav-link">Історія</Link>
+                onClick={() => navigate('/subscription')}
+                className="btn-ghost"
+                style={{ cursor: 'pointer' }}
+                title="Купити спроби"
+              >
+                <span className="attempts-label">Спроби:</span>
+                <strong style={{ color: '#7dd3fc' }}>{user.attempts_left}</strong>
+              </div>
+              <div className="nav-icons">
+                <Link to="/statistics" className="nav-icon-link" title="Статистика">
+                  <img src="/statistics.png" alt="Статистика" className="nav-img" />
+                </Link>
+                <Link to="/history" className="nav-icon-link" title="Історія">
+                  <img src="/history.png" alt="Історія" className="nav-img" />
+                </Link>
+              </div>
             </>
           )}
         </div>
@@ -40,7 +46,7 @@ export function Header() {
         <div className="side actions">
           {user ? (
             <>
-              <span style={{ color: '#cbd5e1', fontSize: 14, marginRight: 10 }}>Привіт, {user.name}!</span>
+              <span className="user-greeting">Привіт, {user.name}!</span>
 
               <button 
                 className="btn-ghost" 
@@ -53,7 +59,9 @@ export function Header() {
                   : 'Прив’язати гаманець'}
               </button>
 
-              <button className="btn-ghost" onClick={handleLogout} style={{ cursor: 'pointer' }}>Вийти</button>
+              <button className="btn-ghost" onClick={handleLogout} style={{ cursor: 'pointer' }}>
+                Вийти
+              </button>
             </>
           ) : (
             <>

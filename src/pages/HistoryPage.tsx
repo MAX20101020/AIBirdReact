@@ -71,9 +71,7 @@ export function HistoryPage() {
 
   return (
     <div className="history-container">
-      <div style={{ position: 'absolute', top: '80px', left: '20px' }}>
-        <BackButton />
-      </div>
+      <BackButton />
 
       <h1 className="history-title">Історія аналізів</h1>
 
