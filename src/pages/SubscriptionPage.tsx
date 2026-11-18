@@ -5,7 +5,7 @@ import { BackButton } from '../components/BackButton';
 import { api, ApiError } from '../api/client';
 import './SubscriptionPage.css';
 
-const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS;
+const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3"; 
 const CONTRACT_ABI = ["function buySubscription(uint8 _type) external payable"];
 const Plan = {BASIC: 0, PRO: 1, PRO_PLUS: 2 };
 
@@ -33,10 +33,6 @@ export function SubscriptionPage() {
     try {
       if (!window.ethereum) {
         throw new Error("Будь ласка, встановіть MetaMask!");
-      }
-
-      if (!CONTRACT_ADDRESS) {
-        throw new Error('Адрес смарт-контракту не налаштований.');
       }
 
       const provider = new ethers.BrowserProvider(window.ethereum);
